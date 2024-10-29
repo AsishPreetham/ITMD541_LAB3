@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator with Currency Conversion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="tip-form">
+            <label for="billTotal">Bill Total:</label>
+            <input type="text" id="billTotal" placeholder="Enter bill amount" required>
+            <span id="error-message" class="error"></span>
+
+            <label for="currency">Select Currency:</label>
+            <select id="currency">
+                <option value="USD" data-rate="1">Dollar $</option>
+                <option value="INR" data-rate="84.07">Indian Rupee ₹</option>
+                <option value="JPY" data-rate="149.34">Japanese Yen ¥</option>
+            </select>
+
+            <div class="conversion-information">
+                <p><strong>Conversion Rates:</strong></p>
+                <p>1 USD = ₹84.07 (INR), ¥149.34 (JPY)</p>
+            </div>
+
+            <label for="tip">Tip Percentage:</label>
+            <input type="range" id="tip" min="0" max="100" value="15">
+            <span id="tip-percentage" class="disabled-output">15%</span>
+
+            <label for="tip-amount">Tip Amount:</label>
+            <input type="text" id="tip-amount" disabled class="disabled-output">
+
+            <label for="total-with-tip">Total Bill with Tip:</label>
+            <input type="text" id="total-with-tip" disabled class="disabled-output">
+
+           
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
